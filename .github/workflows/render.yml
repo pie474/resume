@@ -1,5 +1,8 @@
 name: Build LaTeX
 
+permissions:
+  contents: write
+
 on:
   push:
     paths:
