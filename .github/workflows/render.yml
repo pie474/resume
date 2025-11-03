@@ -5,6 +5,8 @@ on:
     paths:
       - "main.tex"
       - .github/workflows/render.yml
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -19,8 +21,13 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+      - name: Deploy PDF to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: resume
-          path: ./main.pdf
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          keep_files: false
+          full_commit_message: "Publish compiled resume pdf"
+          allow_empty_commit: false
