@@ -1,8 +1,5 @@
-*.gz
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.out
+*
 
-resume?.*
+!main.tex
+!tex-fmt.toml
+!.gitignore
