@@ -1,0 +1,26 @@
+name: Build LaTeX
+
+on:
+  push:
+    paths:
+      - "main.tex"
+      - .github/workflows/render.yml
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: ./resume.pdf
