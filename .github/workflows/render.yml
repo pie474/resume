@@ -23,14 +23,19 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: main.tex
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -output-directory=build
+
+      - name: Verify PDF exists
+        run: |
+          ls -lah
+          ls -lah build
+          test -f build/main.pdf || { echo "build/main.pdf not found"; exit 1; }
 
       - name: Deploy PDF to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: build
           publish_branch: gh-pages
           keep_files: false
-          full_commit_message: "Publish compiled resume pdf"
-          allow_empty_commit: false
