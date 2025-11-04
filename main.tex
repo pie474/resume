@@ -76,10 +76,18 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSubheadingInv}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\textit{#1}} & \textit{\small #2} \\
+      \textbf{\small#3} & #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textbf{\small#1} & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -122,7 +130,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Washington}{Seattle, WA}
-      {Bachelor of Science, Electrical and Computer Engineering (3.73) $|$ Minor in Music}{Sep. 2022 -- Jun 2026}
+      {Bachelor of Science, Electrical and Computer Engineering (3.73) $|$ Minor in Music}{Sep 2022 -- Jun 2026}
       \resumeItemListStart
         \resumeItem{Relevant Coursework: Machine Learning, Computer Architecture, Embedded Systems, Signal Processing, Data Structures \& Algorithms, Digital Design, Control Systems, Statics, Kinematics and Dynamics}
       \resumeItemListEnd
@@ -136,34 +144,33 @@
       {Software Engineering Intern}{June 2025 -- Sep 2025}
       {Bidgely}{Palo Alto, CA}
       \resumeItemListStart
-        \resumeItem{Performed supervised fine-tuning of a large language model (LLM) on a curated domain-specific dataset}
-        \resumeItem{Designed and implemented a custom retrieval-augmented generation (RAG) pipeline for proprietary data, reducing response latency
-by 47\%}
+        \resumeItem{Performed \textbf{supervised fine-tuning} of a large language model (\textbf{LLM}) on a curated \textbf{domain-specific dataset}}
+        \resumeItem{Designed and implemented a \textbf{custom retrieval-augmented generation} (RAG) pipeline for proprietary data, reducing \textbf{response latency by 47\%}}
       \resumeItemListEnd
 
     \resumeSubheading
       {Undergraduate Research Assistant}{Oct 2024 -- May 2025}
       {University of Washington}{Seattle, WA}
       \resumeItemListStart
-        \resumeItem{Optimized an MSCKF based VINS algorithm for GPS-fused visual inertial odometry on an outdoor ground robot}
+        \resumeItem{Optimized \textbf{MSCKF} based VINS algorithm for \textbf{GPS-fused visual-inertial odometry} on outdoor ground robot}
       \resumeItemListEnd
 
-    \resumeSubheading
+    \resumeSubheadingInv
     {Geegah LLC}{Ithaca, NY}
       {Engineering Intern}{June 2024 -- Sep 2024}
       \resumeItemListStart
-        \resumeItem{Brought up and verified RF circuitry in next-gen (4x pixel density) ultrasonic imager with 200+ components}
-        \resumeItem{Reengineered FPGA architecture for 25\% lower resource use and 100x performance gain.}
-        \resumeItem{Created Python API for USB communication, resulting in successful customer demos and IEEE IUS presentation}
+        \resumeItem{Brought up and verified \textbf{RF circuitry} in next-gen (4x pixel density) ultrasonic imager with 200+ components}
+        \resumeItem{Reengineered \textbf{FPGA} architecture for \textbf{25\% lower resource use} and \textbf{100x performance gain}}
+        \resumeItem{Created Python API for USB communication, enabling successful \textbf{customer demos} and \textbf{IEEE IUS} presentation}
     \resumeItemListEnd
 
     \resumeSubSubheading
       {Applications Intern}{June 2023 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Developed cost efficient integration of proprietary imager technology with 3 axis motion control stage}
-        \resumeItem{Result was demoed and presented at DARPA ERI summit 2023 (1300+ participants)}
-        \resumeItem{Prototyped and troubleshot fluidics, electronics and full web app stack for a water quality monitoring PoC device}
-        \resumeItem{Used Flask in Python to create a REST API to enable fully remote operation}
+        \resumeItem{Developed cost-efficient integration of proprietary imager technology with 3 axis motion control stage}
+        \resumeItem{Demoed results at \textbf{DARPA ERI summit 2023 (1300+ participants)}}
+        \resumeItem{Prototyped and troubleshot \textbf{fluidics, electronics and full stack web app} for water quality monitoring PoC}
+        \resumeItem{Used Flask (Python) to create a \textbf{REST API} enabling fully remote operation}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -176,14 +183,14 @@ by 47\%}
         {Controls Software Lead}{Sep 2022 -- Present}
         {Advanced Robotics at the University of Washington (ARUW)}{Seattle, WA}
         \resumeItemListStart
-          \resumeItem{Designed and implemented Cascade PID-LQG based controller of a 6DOF balancing two-wheel-legged robot (5-bar active suspension). Simulated in Matlab/Simulink before deploying to STM32 embedded environment}
-          \resumeItem{Developing a Meta-Imitation Learning pipeline that distills many reinforcement-learned and MPC controllers into a recurrent foundation policy capable of online system identification and zero-shot adaptation to new dynamics}
-          \resumeItem{Implemented and optimized inverse kinematics and gravity compensation for 8DOF differential manipulator}
-          \resumeItem{Designed nonlinear sensor fusion algorithm eliminating angular drift between 3 independent IMUs on 8DOF robot}
-          \resumeItem{Managed team of 10 students to deliver and document the following under tight deadlines in a 75k+ LoC codebase}
+          \resumeItem{Designed and implemented \textbf{Cascade PID-LQG controller} of a \textbf{6DOF balancing two-wheel-legged robot} (5-bar active suspension). \textbf{Simulated in Matlab/Simulink} before STM32 deployment}
+          \resumeItem{Developing a \textbf{Meta-Imitation Learning} pipeline distilling \textbf{RL and MPC} controllers into a \textbf{recurrent foundation policy} for \textbf{online system identification} and \textbf{zero-shot adaptation}}
+          \resumeItem{Implemented \textbf{inverse kinematics} and gravity compensation for \textbf{8DOF differential manipulator}}
+          \resumeItem{Designed \textbf{nonlinear sensor fusion} eliminating angular drift between 3 independent IMUs}
+          \resumeItem{Managed \textbf{team of 10} to deliver and document the following under tight deadlines in a \textbf{75k+ LoC} codebase}
           \resumeItemListStart
-            \resumeItem{A novel autonomous path-following algorithm that can operate at 3x the speed as its previous iteration}
-            \resumeItem{Kalman Filter localization with 2-3cm drift over 100m travel distance and fusion with fiducial markers}
+            \resumeItem{A novel \textbf{autonomous path-following} algorithm operating at \textbf{3x previous speed}}
+            \resumeItem{Achieved \textbf{Kalman Filter} localization with \textbf{2-3 cm drift} over \textbf{100m travel}, fused with \textbf{fiducial markers}}
           \resumeItemListEnd
         \resumeItemListEnd
 
@@ -196,8 +203,7 @@ by 47\%}
       \resumeProjectHeading
         {\textbf{FTC Robotics Team 14504 Serenity Now!}}{May 2018 -- May 2022}
         \resumeItemListStart
-          \resumeItem{Implemented odometry, pure pursuit, spline interpolation for path planning, obstacle avoidance, computer vision using
-openCV and TensorFlow, and multithreaded software architecture in Java on Android (7k+ LoC).}
+          \resumeItem{Implemented \textbf{odometry}, pure pursuit, \textbf{spline-interpolated path planning}, \textbf{obstacle avoidance}, and computer vision using \textbf{OpenCV/TensorFlow} with \textbf{multithreaded Java architecture (7k+ LoC)}}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
