@@ -1,6 +1,6 @@
 *
 
-!main.tex
+!*.tex
 !tex-fmt.toml
 !.gitignore
 !.github
