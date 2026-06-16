@@ -19,9 +19,14 @@
 \usepackage[T1]{fontenc}   
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{etoolbox}
 \input{glyphtounicode}
 
-
+\newbool{boldkeywords}
+\setbool{boldkeywords}{true}
+\newcommand{\boldable}[1]{%
+  \ifbool{boldkeywords}{\textbf{#1}}{#1}%
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -33,7 +38,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -98,7 +103,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-
 \begin{document}
 
 %----------HEADING----------
@@ -112,21 +116,19 @@
 
 %----------BLURB----------
 \begin{center}
-  \small ECE student specializing in robotics and control systems, with experience in real-time state estimation, nonlinear control, and embedded systems. Proven leader in robotics projects, delivering optimized algorithms in industry and research.
+  \small ECE student specializing in \textbf{autonomy, sensor fusion, and real-time systems}. Proven leader in hardware/software integration, delivering high-performance algorithms in C++/Python for industry and research. Passionate about owning complex technical challenges from embedded edge devices to full-stack fleet management.
 \end{center}
-
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Washington}{Seattle, WA}
-      {Bachelor of Science, Electrical and Computer Engineering (3.7) $|$ Minor in Music}{Sep 2022 -- Jun 2026}
+      {Bachelor of Science, Electrical and Computer Engineering (3.7) $|$ Music Minor}{Sep 2022 -- Jun 2026}
       \resumeItemListStart
-        \resumeItem{Relevant Coursework: Machine Learning, Computer Architecture, Embedded Systems, Signal Processing, Data Structures \& Algorithms, Digital Design, Control Systems, Statics, Kinematics and Dynamics}
+        \resumeItem{Relevant Coursework: Machine Learning, Computer Architecture, Embedded Systems, Signal Processing, Data Structures \& Algorithms, Control Systems}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -135,81 +137,72 @@
       {Software Engineering Intern}{June 2025 -- Sep 2025}
       {Bidgely}{Palo Alto, CA}
       \resumeItemListStart
-        \resumeItem{Performed \textbf{supervised fine-tuning} of a large language model (\textbf{LLM}) on a curated \textbf{domain-specific dataset}}
-        \resumeItem{Designed and implemented a \textbf{custom retrieval-augmented generation} (RAG) pipeline for proprietary data, reducing \textbf{response latency by 47\%}}
+        \resumeItem{Performed \boldable{supervised fine-tuning} of a large language model (\boldable{LLM}) on a curated \boldable{domain-specific dataset}}
+        \resumeItem{Designed and implemented a \boldable{custom retrieval-augmented generation} (RAG) pipeline for proprietary data, reducing \boldable{response latency by 47\%}}
       \resumeItemListEnd
 
     \resumeSubheading
       {Undergraduate Research Assistant}{Oct 2024 -- May 2025}
       {University of Washington}{Seattle, WA}
       \resumeItemListStart
-        \resumeItem{Optimized \textbf{MSCKF} based VINS algorithm for \textbf{GPS-fused visual-inertial odometry} on outdoor ground robot}
-      \resumeItemListEnd
+        \resumeItem{Optimized \boldable{sensor fusion} algorithms (MSCKF-based VINS) leveraging \boldable{computer vision} and GPS data for \boldable{autonomous} outdoor ground robots}
+    \resumeItemListEnd
 
     \resumeSubheadingInv
     {Geegah LLC}{Ithaca, NY}
       {Engineering Intern}{June 2024 -- Sep 2024}
       \resumeItemListStart
-        \resumeItem{Brought up and verified \textbf{RF circuitry} in next-gen (4x pixel density) ultrasonic imager with 200+ components}
-        \resumeItem{Reengineered \textbf{FPGA} architecture for \textbf{25\% lower resource use} and \textbf{100x performance gain}}
-        \resumeItem{Created Python API for USB communication, enabling successful \textbf{customer demos} and \textbf{IEEE IUS} presentation}
+        \resumeItem{Brought up and verified \boldable{RF circuitry} in next-gen (4x pixel density) ultrasonic imager with 200+ components}
+        \resumeItem{Reengineered \boldable{FPGA} architecture for \boldable{25\% lower resource use} and \boldable{100x performance gain}}
+        \resumeItem{Created Python API for USB communication, enabling successful \boldable{customer demos} and \boldable{IEEE IUS} presentation}
     \resumeItemListEnd
 
     \resumeSubSubheading
       {Applications Intern}{June 2023 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Developed cost-efficient integration of proprietary imager technology with 3 axis motion control stage}
-        \resumeItem{Demoed results at \textbf{DARPA ERI summit 2023 (1300+ participants)}}
-        \resumeItem{Prototyped and troubleshot \textbf{fluidics, electronics and full stack web app} for water quality monitoring PoC}
-        \resumeItem{Used Flask (Python) to create a \textbf{REST API} enabling fully remote operation}
+        \resumeItem{Integrated proprietary imager with 3axis motion control stage presented at \boldable{DARPA ERI summit 2023}}
+        \resumeItem{Prototyped fluidics, electronics, and full-stack web app for water quality PoC with a \boldable{Python/Flask REST API}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-
-%-----------CLUBS AND PROJECTS-----------
-\section{Clubs and Projects}
+%-----------EXTRACURRICULARS-----------
+\section{Extracurriculars and Projects}
     \resumeSubHeadingListStart
       \resumeSubheading
         {Controls Software Lead}{Sep 2022 -- Present}
         {Advanced Robotics at the University of Washington (ARUW)}{Seattle, WA}
         \resumeItemListStart
-          \resumeItem{Designed and implemented \textbf{Cascade PID-LQG controller} of a \textbf{6DOF balancing two-wheel-legged robot} (5-bar active suspension). \textbf{Simulated in Matlab/Simulink} before STM32 deployment}
-          \resumeItem{Developing a \textbf{Meta-Imitation Learning} pipeline distilling \textbf{RL and MPC} controllers into a \textbf{recurrent foundation policy} for \textbf{online system identification} and \textbf{zero-shot adaptation}}
-          \resumeItem{Implemented \textbf{inverse kinematics} and gravity compensation for \textbf{8DOF differential manipulator}}
-          \resumeItem{Designed \textbf{nonlinear sensor fusion} eliminating angular drift between 3 independent IMUs}
-          \resumeItem{Managed \textbf{team of 10} to deliver and document the following under tight deadlines in a \textbf{75k+ LoC} codebase}
-          \resumeItemListStart
-            \resumeItem{A novel \textbf{autonomous path-following} algorithm operating at \textbf{3x previous speed}}
-            \resumeItem{Achieved \textbf{Kalman Filter} localization with \textbf{2-3 cm drift} over \textbf{100m travel}, fused with \textbf{fiducial markers}}
-          \resumeItemListEnd
+          \resumeItem{Designed and implemented \boldable{Cascade PID-LQG controller} of a \boldable{6DOF balancing two-wheel-legged robot} (5-bar active suspension), \boldable{simulated in Matlab/Simulink} before \boldable{STM32} deployment}
+          \resumeItem{Implemented \boldable{inverse kinematics} and gravity compensation for \boldable{mobile 6DOF differential manipulator}}
+          \resumeItem{Engineered an \boldable{autonomous path planner} that can navigate and follow \boldable{dynamic obstacles} using \boldable{LiDAR}}
+          \resumeItem{Developing a \boldable{Meta-Imitation Learning} pipeline distilling \boldable{RL and MPC} controllers into a \boldable{recurrent foundation policy} for \boldable{online system identification} and \boldable{zero-shot adaptation}}
+          \resumeItem{Managed \boldable{team of 10} to deploy a \boldable{75k+ LoC C/C++} codebase, delivering a \boldable{2.5 m/s autonomous path-planning} algorithm and a \boldable{Kalman Filter/CV sensor fusion} pipeline achieving \boldable{2-3 cm drift} over 100m}
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Wallscapes} $|$ \emph{Swift, ARKit}}{Oct 2023}
+        {\textbf{Control Tower (Fleet Management System)} $|$ \emph{React, Python, GitLab, sCons}}{May 2025}
         \resumeItemListStart
-          \resumeItem{Created an AR IOS app to project virtual art pieces onto public spaces}
+          \resumeItem{Engineered a real-time \boldable{fleet management dashboard} processing \boldable{500Hz telemetry} and aggregating live network metadata from distributed \boldable{Raspberry Pi} and \boldable{Nvidia Jetson} compute nodes}
+          \resumeItem{Architected a \boldable{dynamic IP resolution} database and \boldable{API}, integrating with \boldable{sCons} to enable \boldable{automated firmware flashing} to microcontrollers based on real-time hardware target data}
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{FTC Robotics Team 14504 Serenity Now!}}{May 2018 -- May 2022}
+        {\textbf{Smart Twister} $|$ \emph{ESP32, React}}{May 2025}
         \resumeItemListStart
-          \resumeItem{Implemented \textbf{odometry}, pure pursuit, \textbf{spline-interpolated path planning}, \textbf{obstacle avoidance}, and computer vision using \textbf{OpenCV/TensorFlow} with \textbf{multithreaded Java architecture (7k+ LoC)}}
+          \resumeItem{Developed a novel optimization approach to combat pressure sensor cross-talk, and a full-stack web interface.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
-%
 %----------- SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: C/C++, Python, Java, Verilog/SystemVerilog, Matlab, TypeScript} \\
-     \textbf{Developer Tools}{: Git, GoogleTest, ModelSim, Quartus, OpenCV, modm, Matlab/Simulink, React, Unix/Linux, ROS} \\
-     \textbf{Other}{: Arduino, Raspberry Pi, Finite Element Modeling, LaTeX, Fusion 360, CAN Bus, Oscilloscope/Logic Analyzer}
+     \textbf{Tools}{: Git, React, OpenCV, Matlab/Simulink, Unix/Linux, ROS} \\
+    %  \textbf{Other}{: STM32, ESP32, UART, CAN, Oscilloscope, Logic Analyzer}
     }}
  \end{itemize}
-
 
 %-------------------------------------------
 \end{document}
