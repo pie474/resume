@@ -134,6 +134,19 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {Robot Controls Software Lead}{Sep 2022 -- July 2026}
+      {Advanced Robotics at the University of Washington (ARUW)}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented \boldable{Cascade PID-LQG controller} of a \boldable{6DOF balancing two-wheel-legged robot} (5-bar active suspension), \boldable{simulated in Matlab/Simulink} before \boldable{STM32} deployment}
+        \resumeItem{Used \boldable{Reinforcement Learning} to train a balancing policy for the same robot with \boldable{apprenticeship learning}}
+        \resumeItem{Implemented \boldable{inverse kinematics} and gravity feedforward for \boldable{mobile 6DOF differential manipulator}}
+        \resumeItem{Designed a \boldable{Extended Kalman Filter} for wheel-CV-fused localization achieving \boldable{2-3 cm accuracy} over 100m}
+        \resumeItem{Engineered an \boldable{autonomous path planner/follower} that can navigate \boldable{dynamic obstacles} using \boldable{LiDAR}}
+        \resumeItem{Prototyped a \boldable{Meta-Imitation Learning} pipeline in \boldable{PyTorch} and \boldable{Mujoco} distilling \boldable{RL and MPC} controllers into a \boldable{recurrent foundation policy} for \boldable{online system identification} and \boldable{zero-shot adaptation}}
+        \resumeItem{Managed \boldable{team of 10} to maintain and deploy an \boldable{open-source 75k+ LoC C/C++} codebase}
+      \resumeItemListEnd
+
+    \resumeSubheading
       {Software Engineering Intern}{June 2025 -- Sep 2025}
       {Bidgely}{Palo Alto, CA}
       \resumeItemListStart
@@ -160,38 +173,34 @@
     \resumeSubSubheading
       {Applications Intern}{June 2023 -- Sep 2023}
       \resumeItemListStart
-        \resumeItem{Integrated proprietary imager with 3axis motion control stage presented at \boldable{DARPA ERI summit 2023}}
-        \resumeItem{Prototyped fluidics, electronics, and full-stack web app for water quality PoC with a \boldable{Python/Flask REST API}}
+        \resumeItem{Integrated proprietary imager with 3axis motion control stage presented at \boldable{DARPA ERI Summit 2023}}
+        % \resumeItem{Prototyped fluidics, electronics, and full-stack web app for water quality PoC with a \boldable{Python/Flask REST API}}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------EXTRACURRICULARS-----------
-\section{Extracurriculars and Projects}
+%-----------PROJECTS-----------
+\section{Projects}
     \resumeSubHeadingListStart
-      \resumeSubheading
-        {Controls Software Lead}{Sep 2022 -- July 2026}
-        {Advanced Robotics at the University of Washington (ARUW)}{Seattle, WA}
+
+      \resumeProjectHeading
+        {\textbf{Optical Triangulation of Ionospheric Events} $|$ \emph{OpenCV, Python}}{May 2026}
         \resumeItemListStart
-          \resumeItem{Designed and implemented \boldable{Cascade PID-LQG controller} of a \boldable{6DOF balancing two-wheel-legged robot} (5-bar active suspension), \boldable{simulated in Matlab/Simulink} before \boldable{STM32} deployment}
-          \resumeItem{Implemented \boldable{inverse kinematics} and gravity compensation for \boldable{mobile 6DOF differential manipulator}}
-          \resumeItem{Engineered an \boldable{autonomous path planner} that can navigate and follow \boldable{dynamic obstacles} using \boldable{LiDAR}}
-          \resumeItem{Developing a \boldable{Meta-Imitation Learning} pipeline in \boldable{PyTorch} and \boldable{Mujoco} distilling \boldable{RL and MPC} controllers into a \boldable{recurrent foundation policy} for \boldable{online system identification} and \boldable{zero-shot adaptation}}
-          \resumeItem{Managed \boldable{team of 10} to deploy a \boldable{75k+ LoC C/C++} codebase, delivering a \boldable{2.5 m/s autonomous path-planning} algorithm and an \boldable{Extended Kalman Filter} pipeline achieving \boldable{2-3 cm drift} over 100m}
+          \resumeItem{Meteor detection algorithm and trajectory reconstruction pipeline capable of fusing multimodal data. Developed a custom end-to-end simulation environment for accuracy validation}
         \resumeItemListEnd
 
       \resumeProjectHeading
-        {\textbf{Control Tower (Fleet Management System)} $|$ \emph{React, Python, GitLab, sCons}}{May 2025}
+        {\textbf{Control Tower (Fleet Management System)} $|$ \emph{React, Python, GitLab, sCons}}{Apr 2026}
         \resumeItemListStart
-          \resumeItem{Engineered a real-time \boldable{fleet management dashboard} processing \boldable{500Hz telemetry} and aggregating live network metadata from distributed \boldable{Raspberry Pi} and \boldable{Nvidia Jetson} compute nodes}
-          \resumeItem{Architected a \boldable{dynamic IP resolution} database and \boldable{API}, integrating with \boldable{sCons} to enable \boldable{automated firmware flashing} to microcontrollers based on real-time hardware target data}
+          \resumeItem{Real-time \boldable{fleet management dashboard} processing \boldable{500Hz telemetry} and aggregating live network metadata from distributed \boldable{Raspberry Pi} and \boldable{Nvidia Jetson} compute nodes}
+          \resumeItem{\boldable{Dynamic IP resolution} database and \boldable{API}, integrating with \boldable{sCons} to enable \boldable{automated firmware flashing} to microcontrollers based on real-time hardware target data}
         \resumeItemListEnd
 
-      \resumeProjectHeading
-        {\textbf{Smart Twister} $|$ \emph{ESP32, React}}{May 2025}
-        \resumeItemListStart
-          \resumeItem{Developed a novel optimization approach to combat pressure sensor cross-talk, and a full-stack web interface.}
-        \resumeItemListEnd
+      % \resumeProjectHeading
+      %   {\textbf{Smart Twister} $|$ \emph{ESP32, React}}{May 2025}
+      %   \resumeItemListStart
+      %     \resumeItem{Developed a novel optimization approach to combat pressure sensor cross-talk, and a full-stack web interface.}
+      %   \resumeItemListEnd
       
       % \resumeProjectHeading
       %   {\textbf{FTC Robotics Team 14504 Serenity Now!}}{May 2018 -- May 2022}
@@ -205,7 +214,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: C/C++, Python, Java, Verilog/SystemVerilog, Matlab, TypeScript} \\
-     \textbf{Tools}{: Git, React, OpenCV, Matlab/Simulink, Unix/Linux, ROS} \\
+     \textbf{Tools}{: Git, React, MERN, OpenCV, Matlab/Simulink, Unix/Linux, ROS, CAN Bus, Logic Analyzer} \\
     %  \textbf{Other}{: STM32, ESP32, UART, CAN, Oscilloscope, Logic Analyzer}
     }}
  \end{itemize}
