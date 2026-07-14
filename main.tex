@@ -23,7 +23,7 @@
 \input{glyphtounicode}
 
 \newbool{boldkeywords}
-\setbool{boldkeywords}{true}
+\setbool{boldkeywords}{false}
 \newcommand{\boldable}[1]{%
   \ifbool{boldkeywords}{\textbf{#1}}{#1}%
 }
@@ -115,18 +115,19 @@
 \end{center}
 
 %----------BLURB----------
-\begin{center}
-  \small ECE graduate specializing in \textbf{autonomy, sensor fusion, and real-time systems}. Proven leader in hardware/software integration, delivering high-performance algorithms in C++/Python for industry and research. Passionate about owning complex technical challenges from embedded edge devices to full-stack fleet management.
-\end{center}
+% \begin{center}
+%   \small ECE graduate specializing in \textbf{autonomy, sensor fusion, and real-time systems}. Proven leader in hardware/software integration, delivering high-performance algorithms in C++/Python for industry and research. Passionate about owning complex technical challenges from embedded edge devices to full-stack fleet management.
+% \end{center}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Washington}{Seattle, WA}
-      {Bachelor of Science, Electrical and Computer Engineering (3.73) $|$ Music Minor}{Sep 2022 -- Jun 2026}
+      {Bachelor of Science, Electrical and Computer Engineering (3.73, Dean's List) $|$ Music Minor}{Sep 2022 -- Jun 2026}
       \resumeItemListStart
-        \resumeItem{Relevant Coursework: Learning-Based Control, Machine Learning, Computer Architecture, Embedded Systems, Signal Processing, Data Structures \& Algorithms, Control Systems}
+        \resumeItem{Relevant Coursework: Learning-Based Control, Machine Learning, Computer Architecture, Embedded Systems}
+        % , Signal Processing, Data Structures \& Algorithms, Control Systems
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -161,17 +162,18 @@
         \resumeItem{Optimized real-time \boldable{vision-SLAM and sensor fusion} algorithms (MSCKF-based VINS) leveraging computer vision, IMU, and GPS data for \boldable{autonomous robot navigation} in unmapped environments}
     \resumeItemListEnd
 
-    \resumeSubheadingInv
-    {Geegah LLC}{Ithaca, NY}
+    \resumeSubheading
       {Engineering Intern}{June 2024 -- Sep 2024}
+      {Geegah LLC}{Ithaca, NY}
       \resumeItemListStart
         \resumeItem{Brought up and verified \boldable{RF circuitry} in next-gen (4x pixel density) ultrasonic imager with 200+ components}
         \resumeItem{Reengineered \boldable{FPGA} architecture for \boldable{25\% lower resource use} and \boldable{100x performance gain}}
         \resumeItem{Created Python API for USB communication, enabling successful \boldable{customer demos} and \boldable{IEEE IUS} presentation}
     \resumeItemListEnd
 
-    \resumeSubSubheading
+    \resumeSubheading
       {Applications Intern}{June 2023 -- Sep 2023}
+      {Geegah LLC}{Ithaca, NY}
       \resumeItemListStart
         \resumeItem{Integrated proprietary imager with 3axis motion control stage presented at \boldable{DARPA ERI Summit 2023}}
         % \resumeItem{Prototyped fluidics, electronics, and full-stack web app for water quality PoC with a \boldable{Python/Flask REST API}}
@@ -214,7 +216,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: C/C++, Python, Java, Verilog/SystemVerilog, Matlab, TypeScript} \\
-     \textbf{Tools}{: Git, React, MERN, OpenCV, Matlab/Simulink, Unix/Linux, ROS, CAN Bus, Logic Analyzer} \\
+     \textbf{Tools}{: Git, React, OpenCV, Matlab/Simulink, Unix/Linux, ROS, CAN Bus, Logic Analyzer} \\
     %  \textbf{Other}{: STM32, ESP32, UART, CAN, Oscilloscope, Logic Analyzer}
     }}
  \end{itemize}
